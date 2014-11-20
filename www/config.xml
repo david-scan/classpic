@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id = "com.brianCamera.example"
-        versionCode = "35"
+        versionCode = "36"
         version = "1.0" >
 
     <!-- versionCode is optional and Android only -->
@@ -32,7 +32,10 @@
          <icon src= "images/icon-76.png" gap:platform="ios" width="76" height="76"/>
          <icon src= "images/icon-120.png" gap:platform="ios" width="120" height="120"/>
          <icon src= "images/icon-152.png" gap:platform="ios" width="152" height="152"/>
-<preference name="orientation" value="landscape" /> 
+<preference name="orientation" value="landscape" />
+<preference name="target-device" value="tablet" />
+<preference name="android-minSdkVersion" value="11" />
+<preference name="android-targetSdkVersion" value="14" /> 
 <feature name="http://api.phonegap.com/1.0/camera"/>
         <gap:platform name="android" />
         <gap:platform name="ios"/>
