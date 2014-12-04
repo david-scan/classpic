@@ -14,8 +14,8 @@ button:focus{
  #jumbo-index {
     position: relative;
     background: rgba(51, 51, 51, 0.8);
-    padding-top: auto;
-    padding-bottom:0%;
+    padding-top: 8%;
+    padding-bottom:8%;
     margin-top:10%;
     margin-bottom:10%;
     color: inherit;
@@ -35,7 +35,7 @@ button:focus{
   }
    #jumbo-index button{
     font-size:2em;
-    margin-bottom:4%;
+    margin-bottom:0;
 
   }
    #jumbo-index .btn-default{
@@ -50,12 +50,11 @@ button:focus{
   
 }*/
 #jumbo-index {
-  margin:25% auto 25% auto;
+  margin:30% auto 30% auto;
+  padding-top: 10%;
+  padding-bottom:10%;
   }
   #jumbo-index input{
-  margin-bottom:6%;
-  }
-  #jumbo-index button{
   margin-bottom:6%;
   }
 }
@@ -64,12 +63,11 @@ button:focus{
   font-size:110%; 
 }*/
 #jumbo-index {
-  margin:25% auto 25% auto;
+  margin:30% auto 30% auto;
+  padding-top: 10%;
+  padding-bottom:10%;
   }
   #jumbo-index input{
-  margin-bottom:6%;
-  }
-  #jumbo-index button{
   margin-bottom:6%;
   }
 }
@@ -89,33 +87,28 @@ invisible output box that houses the preview*/
 	text-align:center;
 }
 /*this applies properties to the image that will appear as a left
-screen preview it is a feature called ouput (id of list) that houses a view of the chosen photo*/
+screen preview*/
 #list{
 	position:relative;
     padding-top:0%;
     width:auto;
     text-align:left;
 }
-/*Warning Icon that appears if user attempts to upload without selecting a photo*/ 
 .image-holder .fa{
 	position:relative;
-	font-size:5em;
+	font-size:3em;
 	display:block;
 	text-align:center;
 }
-/*Warning text that appears alongside warning-icon*/
 .image-holder .warning-text{
 	text-align: center;
-	font-size:2em;
 	padding:5% 0 5% 0;
 	color:#FF0;
 }
-/*an ititial width setting for chosen photo that will be altered by setting on #list(above)*/
 .image-holder img{
     position:relative;
     width:90%;  
 }
-/*Displays the statment chosen in the form*/
 .chosen-statement{
 	position:relative;
 	color:#fff;
@@ -123,11 +116,9 @@ screen preview it is a feature called ouput (id of list) that houses a view of t
 	text-align: left;
 	padding:2%;
 }
-/*Warning text that appears if statement not selected before uploading*/
 .chosen-statement .warning-text{
 	font-size:1.3em;
 }
-/*Displays the student names chosen in the form*/
 .student-names{
 	position:absolute;
 	width:100%;
@@ -141,24 +132,25 @@ screen preview it is a feature called ouput (id of list) that houses a view of t
 	padding-bottom: 4%;
 	max-height:25%;
 }
-/*Warning text that appears if student names not selected before uploading*/
 .student-names .warning-text{
 	font-size:1em;
 	padding:0 0 5% 0;
 	}
-/*A property added to all the individual student-names*/
 .name-text{
 	position:relative;
 	width:50%;
 	float:left;
 }
-
+.warning-text{
+	font-size:1.5em;
+	color:#FF0;
+}
 
 /*FORMS*/
 /*div that contains both the first stage form('params') and 
 second stage form('statementbody')*/
 .form-holder{
-	position:absolute;	
+	position:absolute;
 	height:100%;
 	top:0;
 	bottom:0;
@@ -172,16 +164,6 @@ second stage form('statementbody')*/
 	padding-top:5%;
 	height:auto;
 }
-/*adding properties to the select menus that appear in both
-stages of the form*/
-.form-holder select{
-	position:relative;
-	font-size:1.2em;
-	height:5%;
-	padding:2% 0 2% 2%;
-	border-radius:0.5em;
-	margin-bottom:5%;
-}
 /*this id is added to form-holder to get first stage of form*/
 #params{
 	background:rgba(64,64,64,0.8);
@@ -192,6 +174,13 @@ stages of the form*/
 	width:40%;
 	display:block;
 }
+#params select{
+	margin-top:10%;
+	margin-bottom:10%;
+}
+.warning-box{
+	margin-top:20%;
+}
 /*Added to the first-stage form that appears in 'params'*/
 #params .forms{
 	position:relative;
@@ -201,17 +190,15 @@ stages of the form*/
 	margin-right:auto;
 	padding-top:10%;	
 }
-
-/*changing the margins for select in first stage*/
-#params select{
-	margin-top:10%;
-	margin-bottom:10%;
-}
-/*This displays warning text if an attempt is made to load without selecting a class name*/
-.warning-box{
-	margin-top:20%;
-	font-size:1.5em;
-	color:#FF0;
+/*adding properties to the select menus that appear in the 'params'
+stage of the form*/
+.form-holder select{
+	position:relative;
+	font-size:1.2em;
+	height:5%;
+	padding:2% 0 2% 2%;
+	border-radius:0.5em;
+	margin-bottom:5%;
 }
 /*adding additional properties to the green buttons*/
 .form-holder .btn-success{
@@ -220,9 +207,7 @@ stages of the form*/
 	padding-bottom:2%;
 	font-size:150%;
 }
-
-/*this id is added to form-holder and is the second stage of form that appears when a class name
-is loaded*/
+/*this id is added to form-holder to get second stage of form*/
 #statementsbody{
 	background:rgba(64,64,64,0.8);
 	padding:2% 2% 0 2%;
@@ -231,7 +216,8 @@ is loaded*/
 	bottom:0;
 	width:40%;
 	display:none;
-	text-align:center;	
+	text-align:center;
+	
 }
 /*Added to the second-stage form that appears in 'statementbody'*/
 #statementsbody .forms{
@@ -250,12 +236,25 @@ on the second stage of the form*/
 	text-align:left;
 	font-family: 'Open Sans', sans-serif;
 }
-/*properties added to the text-field comments box*/  
+
+/*properties added to the text-field comments box
 #user-comments{
 	width:100%;
 	border-radius:0.5em;
 	padding:2%;
 	font-size:100%;
+}*/  
+.modal-link{
+	position:relative;
+	/*height:auto;*/
+	height:5em;
+	text-align: left;
+	width:100%;
+	border-radius:0.5em;
+	padding:2%;
+	font-size:100%;
+	background-color: #ffffff;
+	cursor:pointer;
 }
 /*this is used to space the buttons on statementsbody id*/
 .button-row{
@@ -265,7 +264,7 @@ on the second stage of the form*/
 	padding-bottom:5%;
 	height:auto;
 }
-/*styling needed to add file browsing functionality to Select Photo button*/
+/*styling needed to add file browsing functionality to button*/
 #statementsbody .btn-success input[type=file]{
 	position:absolute;
 	top:0;
@@ -279,8 +278,6 @@ on the second stage of the form*/
 	font-family:'FontAwesome';
 	margin-right:2%;
 }
-/*back-icon(left pointing arrow) that appears under final button on second stage of form
-it allows user to return to first stage(params)*/
 .back{
 	position:relative;
 	display:inline-block;
@@ -340,15 +337,15 @@ it allows user to return to first stage(params)*/
 .header-layout{
 	position:relative;
 	width:100%;
+
 }
-/*close icons and back icon that appear on headers of modals*/
+
 .modal-header .icons{
 	position:relative;
 	display:inline-block;
 	width:10%;
+
 }
-/*adding and changing values to the back icon thats already used on the main form
-these changes occur when it appears in a modal header*/
 .modal-header .back{
 	position:relative;
 	display:none;
@@ -360,13 +357,12 @@ these changes occur when it appears in a modal header*/
 	margin-left:0;
 	float:none;
 }
-/* the modal header text*/
 .modal-header h3{
 	position:relative;
 	display:inline-block;
 	width:77%;
+
 }
-/*icon for closing modals that appears on top-right*/
 .modal-header .close-modal{
 	border:none;
 	position:relative;
@@ -374,30 +370,24 @@ these changes occur when it appears in a modal header*/
 	font-size: 1.5em;
 	background:none;
 }
-/*this is the first stage of the statement modal, where the criteria is set*/
+
 .statement-panel{
 	display:block;
 	position:relative;
 	height:100%;
-	padding:10% 10% 5% 10%;
+	padding:10%;
 }
-/*the following 2 affect how selects and button appear on statement modal*/
+
 .statement-panel .button-row{
 padding:2% 0 2% 0;
 }
+
 .statement-panel select{
 	font-size:1.5em;
-	margin-bottom:8%;
+	margin-bottom:10%;
 	padding:3%;
 }
-/*this is the second stage of the statement modal, where the statements set by criteria are now selected*/
-#statements{
-	display:none;
-	position:relative;
-	height:100%;
-	padding-bottom:5%;
-}
-/*styling added to statement rows in #statements*/
+/*styling added to statement rows in Modals*/
 #statement{
 	padding-right:2%;
 	padding-top:auto;
@@ -410,13 +400,11 @@ padding:2% 0 2% 0;
 	margin-bottom:auto;
 	display:inline-block;	
 }
-/*here the whole statement modal is given an auto height as opposed to the student one*/
+
+/*general styles used for both Modals*/
 #state_sel	.modal-content{
 	height:auto;
 }
-
-/*general styles used for both Modals(student modal and statement modal*/
-
 #statementsbody	.modal-header{
 	font-size: 24px;
 }
@@ -449,8 +437,16 @@ padding:2% 0 2% 0;
 #statementsbody .modal-footer{
 	margin-top:0;
 	}
+#state_sel	.modal-content{
+	height:auto;
+}
+#statements{
+	display:none;
+	position:relative;
+	height:100%;
+	padding-bottom:5%;
+}
 
-/*modal that appears when comment text-area in form is clicked*/
 #comment-modal .modal-content{
 	height:auto;
 }
@@ -466,9 +462,9 @@ padding:2% 0 2% 0;
 	background:none;
 	width:5%;
 	height:20%;
-	 -ms-transform: rotate(270deg); /* IE 9 */
-    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
-    transform: rotate(270deg); /* Standard syntax */
+	 /* -ms-transform: rotate(270deg); IE 9 */
+    /* -webkit-transform: rotate(270deg); Chrome, Safari, Opera */
+    /*transform: rotate(270deg);  Standard syntax */
 }
 #comment-modal .close-modal button{
     padding:0;
@@ -490,7 +486,7 @@ padding:2% 0 2% 0;
 	font-size:1.5em;
 	padding:1%;
 }
-/*//////// end of modal styles ////////*/
+/*end of modal styles*/
 
 
 /*Styles for the right side panel that includes the 
@@ -502,16 +498,17 @@ camera operating button and top-right logo*/
 	right:0;
 	z-index:0;
 	text-align:center;
+
 }
-/*panel that holds the camera-icon link*/
 .camera-panel{
 	position:relative;
 	width:100%;
 	height:100%;
 	background-color:rgba(64,64,64,0.95);
 	text-align:center;
+
 }
-/*This is the link to the device camera*/
+
 .camera-icon{
 	position:relative;
 	vertical-align:middle;
@@ -532,7 +529,7 @@ camera operating button and top-right logo*/
 	position:relative;
 	text-align: center;
 }
-/*houses the logo on the top of right side div*/
+
 .classpic{
 	position:absolute;
 	top:0;
@@ -540,11 +537,12 @@ camera operating button and top-right logo*/
 	z-index:1;
 	width:100%;
 }
+
 .classpic img{
 	margin-top:8%;
 	width:100%;
 }
-/*houses the link to about page*/
+
 .about{
 	position:absolute;
 	bottom:0;
@@ -554,9 +552,8 @@ camera operating button and top-right logo*/
 	text-align:center;
 	padding-bottom:10%;
 }
-/*info icon*/
 .about .fa{
-    position:relative;
+position:relative;
 	font:'FontAwesome';
 	font-size:3.5em;
 	color:#ccc;
@@ -565,6 +562,7 @@ camera operating button and top-right logo*/
 	border:none;
 	margin:0 auto 0 auto;
 	padding:0;
+
 }
 
 
@@ -644,7 +642,7 @@ of these side by side*/
 }
 
 
-/*media queries for font sizes*/
+
 @media (min-width:1200px){
 body {
   font-size:180%;
@@ -656,7 +654,6 @@ body {
   body {
   font-size:180%; 
 }
-/* media query that affects the photo display when devive of min width 992px is used*/
 .image-holder img{
     position:relative;
     width:100%;  
